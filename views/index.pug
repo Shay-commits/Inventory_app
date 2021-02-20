@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[ the GWP Inventory], a very basic Express website developed to keep track of store inventory. Users can view, create, delete and update inventory. A password is required to delete items, this can be obtained from your supervisor.
+
+  h1 Store Content
+
+  if error
+    p Error getting dynamic content.
+  else
+    p The Store has the following inventory:
+
+    ul
+      li #[strong Products:] !{data.product_count}
+      li #[strong Categories:] !{data.category_count}
+      li #[strong Product instances:] !{data.product_instance}

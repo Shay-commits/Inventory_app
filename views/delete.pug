@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="formcontainer")
+    div(class='formtitle')
+      h3(id="delete") #{title}: #{results.name}
+    div(class='forminputs')
+      form(method='POST' action='')
+        label(for='password') Enter password for permission to delete #{results.name}?
+        input(type='password',name='password', required='true', value='')
+
+        button.btn.btn-primary(type='submit') Delete

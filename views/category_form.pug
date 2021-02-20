@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class="formcontainer")
+    div(class='formtitle')
+      h3 #{title}
+    div(class='forminputs')
+      form(action='', method='POST')
+        label(for='name') Name: 
+        input#name(type='text', name='name', value=results? results.name : '')
+        label(for='description') Description: 
+        input#description(type='text', name='description', value=results? results.description : '')
+        label(for='image')  Image: 
+        input#image(type='text', name='image', value=results? results.image : '') 
+      
+        input(type='submit', value='Submit')

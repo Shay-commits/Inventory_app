@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+
+  div(class=stockinstance_container)
+    table 
+      tr
+        th Product Name
+        th Category
+        th Size
+        th Color
+        th Stock Numbers
+        th Add
+        th Remove
+
+      for item in results 
+        tr 
+          td #{item.product.name}
+          td #{item.product.category.name}
+          td #{item.size}
+          td #{item.colour} 
+          td #{item.stock}
+          td 
+            a(href=item.url + '/update')
+              button Update
+          td
+            a(href=item.url + '/delete')
+              button Delete    

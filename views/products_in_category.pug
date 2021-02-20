@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  
+  
+  div(class=container1)
+    for product in products
+      h3= product.name
+      img(src=product.image style.height='200px')
+      p Description: #{product.description}
+      p Price: #{product.price}
+
+      button
+        a(href=product.url+'/delete') Delete
+
+      button
+        a(href=product.url+'/update') Update 
+    
+      

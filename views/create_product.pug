@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(class="formcontainer")
+    div(class='formtitle')
+      h3 #{title}
+    div(class='forminputs')
+      form(action='', method='POST')
+        label(for='name') Name: 
+        input#name(type='text', name='name', value='')
+        label(for='description') Description: 
+        input#description(type='text', name='description', value='')
+        label(for='price')  Price: 
+        input#price(type='text', name='price', value='')
+        label(for='image')  Image: 
+        input#price(type='text', name='image', value='') 
+        label(for='category' ) Category:
+        div(style='display: inline; padding-right:10px;')
+          for item in categories
+            input.checkbox-input(type='checkbox', name='category', id=item._id, value=item._id checked=item.checked)
+            label(for=item._id) #{item.name}
+        input(type='submit', value='Submit')

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}: #{product.name}
+
+  form(action='', method='POST')
+      label(for='name') Name: 
+      input#name(type='text', name='name', value=product.name)
+      label(for='description') Description: 
+      input#description(type='text', name='description', value=product.description)
+      label(for='price')  Price: 
+      input#price(type='text', name='price', value=product.price)
+      label(for='category' ) Category:
+      div(style='display: inline; padding-right:10px;')
+        for item in categories
+          input.checkbox-input(type='checkbox', name='category', id=item._id, value=item._id checked=item.checked)
+          label(for=item._id) #{item.name}  
+      
+      input(type='submit', value='Submit')

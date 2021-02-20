@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  div(class="formcontainer")
+    div(class='formtitle')
+      h3 #{title}
+    div(class='forminputs')
+      form(method='POST' action='')
+        label(for='product') Product:
+        select#book.form-control(type='select' placeholder='Select product' name='product' required='true')
+          - product_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+          for product in product_list
+            if productinstance
+              option(value=product._id selected=(productinstance.product._id.toString()==product._id.toString() ? 'selected' : false) disabled=(productinstance.product._id.toString()==product._id.toString() ? false : true)) #{product.name}
+            else
+              option(value=product._id) #{product.name}
+    
+        label(for='colour') Colour:
+        input(type='text' name='colour' value=(undefined===productinstance ? '' : productinstance.colour) readonly=(undefined===productinstance? '' : "readonly"))
+
+    
+        label(for='size') Size:
+        select#status.form-control(type='select' placeholder='Select size' name='size' required='true')
+          if productinstance
+            option(value=productinstance.size selected= 'selected') #{productinstance.size}
+          else   
+            option(value='S') Small
+            option(value='M') Medium
+            option(value='L') Large
+
+        label(for='stock') Stock:
+        input(type='text' name='stock' value=(undefined===productinstance ? '' : productinstance.stock))    
+
+        button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

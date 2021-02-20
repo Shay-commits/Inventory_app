@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='container-fluid')
+      div(class='home_container')
+        a(href='/directory') Home
+      div(class='all_products')
+        a(href='/directory/products') Products
+      div(class='all_categories')
+        a(href='/directory/categories') Categories
+      div(class='all_product_instances')
+        a(href='/directory/productinstances') Product instances
+      div(class='new_product')  
+        a(href='/directory/product/create') New product
+      div(class='new_cat')
+        a(href='/directory/category/create') New category
+      div(class='new_product_inst')
+        a(href='/directory/productinstance/create') New product instance
+
+
+    div(class='bodycontainer')
+      block content

@@ -1,0 +1,224 @@
+
+body {
+    font-family: monospace;
+    margin:0;
+}
+
+.bodycontainer {
+    margin-left: 1rem;
+}
+
+.formcontainer {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formtitle {
+    grid-column: 1 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.formtitle > h3 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    font-size: 1.75rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: floralwhite;
+}
+
+.forminputs {
+    grid-column: 2 / span 1;
+    display: grid;
+    margin: 10px;
+    border: 2px solid black;
+    background-color: floralwhite;
+
+}
+
+body > div.bodycontainer > div.formcontainer > div.forminputs > form > label {
+    font-weight: bold;
+    margin-bottom: 5px;
+} 
+
+body > div.bodycontainer > div.formcontainer > div.forminputs > form > div {
+    margin-bottom: 25px;
+}
+
+body > div.bodycontainer > div.formcontainer > div.forminputs > form > input[type=submit]:nth-child(11) {
+    margin-bottom: 0px;
+}
+
+body > div.bodycontainer > div.formcontainer > div.forminputs > form {
+    margin: 2rem;
+}
+
+body > div.bodycontainer > div.formcontainer > div.forminputs > form > input, #book, #status, body > div.bodycontainer > div > div.forminputs > form > button {
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+#delete {
+    grid-row: 1;
+}
+
+body > div.bodycontainer > div > div.forminputs {
+    height: fit-content;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-bottom: 1rem;
+    color: black;
+    border-bottom: 1px solid black;
+
+}
+
+.container-fluid > div {
+    padding: 1rem;
+    border-right: 1px solid black;
+}
+
+.container-fluid > div > a {
+    color: black;
+    font-family: monospace;
+
+
+}
+
+body > div.container-fluid > div.home_container {
+
+    margin-left: 1rem;
+}
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.list_container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+div.action_container > a > button {
+    border-radius: 50%;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    width: 15%;
+}
+
+.plist_container {
+    grid-template-columns: 50% auto;
+    justify-items: center;
+    display: grid;
+
+}
+
+.plist_container2 {
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    font-size: 10px;
+
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    border-spacing: 5px;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+  }
+
+
+.image_container {
+    margin: 10px;
+    flex: 1;
+}
+
+div.image_container > img {
+
+    height: auto;
+    width: 100%;
+}
+
+.nonimage_container {
+    margin: 10px;
+    flex: 2;
+}
+
+div.content_container > img {
+    border-radius: 10px;
+    width: 100% 
+
+}
+
+body > div.bodycontainer > div > div:nth-child(3) > div.content_container {
+    height: 71%;
+
+}
+
+.action_container {
+    text-align: center;
+}
+.list_container2 {
+    margin-right: 1rem;
+}
+
+body > div.bodycontainer > div > div:nth-child(3) > div.content_container > img{
+    height: 86.5%;
+
+}
+
+body > div.bodycontainer > div > div:nth-child(3) > div.action_container {
+    margin-top: 3px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+  }
+
+  input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+    margin-right: 10px;
+}
+
+label {
+
+    margin-right: 10px;
+}
+
+
+
